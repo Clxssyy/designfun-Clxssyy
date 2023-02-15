@@ -64,6 +64,14 @@ std::vector<int> min(const std::vector<int>& v1, const std::vector<int>& v2);
 */
 void limit(std::vector<int>& v1, int low, int high);
 
+/*
+    See if a value exists inside of a vector
+    @param[in] v First input value
+    @param[in] value second input value
+    @return true or false
+*/
+bool exists(const std::vector<int>& v, int value);
+
 int main() {
 
     // Average of two numbers
@@ -113,8 +121,7 @@ int main() {
         std::vector<int> v{ 1, 2, 3 };
         int value = 3;
 
-        bool result;
-        // @TODO function call
+        bool result = exists(v, value);
 
         assert(result);
     }
