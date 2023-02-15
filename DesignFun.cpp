@@ -79,6 +79,14 @@ bool exists(const std::vector<int>& v, int value);
 */
 void remove(std::vector<int>& v, int value);
 
+/*
+    Split a vector into two vectors at the value
+    @param[in/out] v First input value
+    @param[in] value second input value
+    @return new split vector
+*/
+std::vector<int> split(std::vector<int>& v, int value);
+
 int main() {
 
     // Average of two numbers
@@ -149,9 +157,8 @@ int main() {
         std::vector<int> v{ 1, 2, 3, 4, 5 };
         int value = 4;
 
-        std::vector<int> result1;
-        std::vector<int> result2; 
-        // @TODO function call
+        std::vector<int> result1 = split(v, value);
+        std::vector<int> result2 = v;
 
         assert(result1 == std::vector<int>( { 1, 2, 3 }));
         assert(result2 == std::vector<int>( { 5 }));
