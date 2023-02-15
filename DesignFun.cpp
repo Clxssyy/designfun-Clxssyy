@@ -48,6 +48,14 @@ double avg(int n1, int n2);
 */
 int min(int n1, int n2);
 
+/*
+    Minimum of two vectors
+    @param[in] v1 First input value
+    @param[in] v2 Second input value
+    @return Minimum of v1 and v2
+*/
+std::vector<int> min(const std::vector<int>& v1, const std::vector<int>& v2);
+
 int main() {
 
     // Average of two numbers
@@ -75,8 +83,7 @@ int main() {
         std::vector<int> v1{ 1, 2, 3 };
         std::vector<int> v2{ 1, 3, 3 };
 
-        std::vector<int> result;
-        // @TODO function call
+        std::vector<int> result = min(v1, v2);
 
         assert(result == v1);
     }
