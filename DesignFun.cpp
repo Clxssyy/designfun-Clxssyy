@@ -72,6 +72,13 @@ void limit(std::vector<int>& v1, int low, int high);
 */
 bool exists(const std::vector<int>& v, int value);
 
+/*
+    Remove a value from a vector
+    @param[in/out] v First input value
+    @param[in] value second input value
+*/
+void remove(std::vector<int>& v, int value);
+
 int main() {
 
     // Average of two numbers
@@ -131,8 +138,8 @@ int main() {
         std::vector<int> v{ 1, 2, 3, 2 };
         int value = 2;
 
-        std::vector<int> result;
-        // @TODO function call
+        remove(v, value);
+        std::vector<int> result = v;
 
         assert(result == std::vector<int>( { 1, 3 } ));
     }
