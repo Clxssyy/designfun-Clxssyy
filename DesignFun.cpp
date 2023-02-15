@@ -40,6 +40,14 @@
 */
 double avg(int n1, int n2);
 
+/*
+    Minimum of two numbers
+    @param[in] n1 First input value
+    @param[in] n2 Second input value
+    @return Minimum of n1 and n2
+*/
+int min(int n1, int n2);
+
 int main() {
 
     // Average of two numbers
@@ -57,8 +65,7 @@ int main() {
         int n1 = 4;
         int n2 = 5;
 
-        int result;
-        // @TODO function call
+        int result = min(n1, n2);
 
         assert(result == n1);
     }
