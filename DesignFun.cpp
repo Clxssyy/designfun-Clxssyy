@@ -56,6 +56,14 @@ int min(int n1, int n2);
 */
 std::vector<int> min(const std::vector<int>& v1, const std::vector<int>& v2);
 
+/*
+    Limit the values in a vector from low to high
+    @param[in/out] v1 First input value
+    @param[in] low second input value
+    @param[in] high third input value
+*/
+void limit(std::vector<int>& v1, int low, int high);
+
 int main() {
 
     // Average of two numbers
@@ -94,8 +102,8 @@ int main() {
         int low = 1;
         int high = 5;
 
-        std::vector<int> result;
-        // @TODO function call
+        limit(v1, low, high);
+        std::vector<int> result = v1;
 
         assert(result == std::vector<int>( { 1, 1, 5, 1, 4, 5 }));
     }
